@@ -16,7 +16,8 @@ It contains PHP 7, Apache 2, Oracle's OCI8 extension.
 
 ```diff
 - Important -
-! The database will not connect, and therefore Climatact will not work properly, without using UF's anyconnect VPN. 
+! The database will not connect, and therefore Climatact will not work properly, 
+! without using UF's anyconnect VPN. 
 + Connect before running the image.
 ``` 
 
