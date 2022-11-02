@@ -1,4 +1,5 @@
 .DS_Store
 
 # ignore dbconnect.php
+#  git update-index --assume-unchanged <filename>
 src/lib/db*
