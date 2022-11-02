@@ -136,7 +136,7 @@ function show_options() {
             // Second col.
             echo '<div class="col-4">';
                 echo create_card($title='Disaster Data', $text='Some Disaster Info.', 
-                    $href='disasters.php', $src_image="public/images/disaster.png");
+                    $href='disasters.php', $src_image="public/images/disasters.png");
             echo '</div>';
             
             // Third col.
