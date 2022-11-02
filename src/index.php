@@ -1,12 +1,14 @@
 <?php
 include_once('header.php');
 
-// test db connection and show output.
-// test_connection();
+
 
 
 // Show options for Weather, Disaster, and Sea Level navigation.
 show_options();
+
+// test db connection and show output.
+test_connection();
 
 
 // close page
