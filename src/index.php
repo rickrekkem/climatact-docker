@@ -23,29 +23,14 @@ print_close_page();
 function test_connection(){
     global $connection;
 
-    // Get all tables made by db user.
-    $sql = 
-        'SELECT table_name
-        FROM user_tables
-        ORDER BY table_name';
-
-    $statement = oci_parse($connection, $sql);
-    oci_execute($statement);
-    
-    while (($row = oci_fetch_object($statement))) {
-       $table_names[] = $row->TABLE_NAME;
-    }
-
     // If test query is not empty, connection succeeded.
-    if($table_names){
+    if($connection){
         echo '<h4 class="text-success"><i>Connection to Cise Database Successful</i></h4>';
-        echo '<br>';
-        print_tables($table_names);
-        echo '<br>';
-
+       
         // Count regional temperature.
-        $count = count_table($table = 'RegionalTemperature');
+        $count = count_table($table = 'GUNGO06.RegionalTemperature');
         echo '<p>Total Count in <b>'.$table.' : '.$count.'</p> </b>';
+        echo '<br>';
     }
     // Connection Failed.
     else {
