@@ -69,14 +69,25 @@ function print_header() {
         
 }
 
-function print_top_menu() {
-     // Print header and navbar
-     echo 
+function print_top_menu($sub_title='') {
+    
+    // If there's a subtitle, add | and text with color.
+    if($sub_title == 'Weather'){
+        $sub_title = '| <i class="text-warning">'.$sub_title.'</i>';
+    }
+    else if($sub_title == 'Natural Disasters'){
+        $sub_title = '| <i class="text-danger">'.$sub_title.'</i>';
+    }
+    else if($sub_title == 'Sea Level'){
+        $sub_title = '| <i class="text-info">'.$sub_title.'</i>';
+    }
         
-
+    // Print header and navbar
+    echo 
     '<div class="hero-unit">
         <br>
-        <h1>Climatact</h1>
+        <h1 class="text-success">Climatact '.$sub_title.'</h1>
+        
         <p>Confront the rapid climate breakdown
         occuring all over the world.</p>
         <p>
@@ -98,13 +109,13 @@ function print_top_menu() {
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav">
                     <li class="nav-item">
-                        <a class="nav-link" href="weather.php" > Weather</a>
+                        <a class="nav-link text-warning"" href="weather.php" > Weather</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="disasters.php" >Natural Disasters</a>
+                        <a class="nav-link text-danger" href="disasters.php" >Natural Disasters</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="sea_level.php">Sea Level</a>
+                        <a class="nav-link text-info" href="sea_level.php">Sea Level</a>
                     </li>
                 </ul>
             </div>

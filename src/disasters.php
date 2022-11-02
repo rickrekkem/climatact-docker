@@ -1,4 +1,5 @@
 <?php
+$sub_title = 'Natural Disasters';
 include_once('header.php');
 
 

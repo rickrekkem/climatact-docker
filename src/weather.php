@@ -1,4 +1,5 @@
 <?php
+$sub_title = 'Weather';
 include_once('header.php');
 
 

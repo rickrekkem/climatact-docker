@@ -3,7 +3,6 @@ include_once('header.php');
 
 
 
-
 // Show options for Weather, Disaster, and Sea Level navigation.
 show_options();
 
@@ -155,12 +154,22 @@ function show_options() {
 
 // create cards for weather, disaster, and sea_level data.
 function create_card($title, $text, $href, $src_image) {
+     // If there's a subtitle, add | and text with color.
+    if($title == 'Weather Data'){
+        $text_class = 'text-warning';
+    }
+    else if($title == 'Disaster Data'){
+        $text_class = 'text-danger';
+    }
+    else if($title == 'Sea Level Data'){
+        $text_class = 'text-info';
+    }
 
     $card = 
         '<div class="card" style="width: 18rem;">
             <img class="card-img-top" src="'.$src_image.'" height="150px" alt="Card image cap">
             <div class="card-body">
-                <h5 class="card-title">'.$title.'</h5>
+                <h5 class="card-title '.$text_class.'">'.$title.'</h5>
                 <p class="card-text">'.$text.'</p>
             </div>
 
@@ -171,7 +180,7 @@ function create_card($title, $text, $href, $src_image) {
             </ul>
 
             <div class="card-body">
-                <a href="'.$href.'" class="card-link">See Details</a>
+                <a href="'.$href.'" class="btn btn-outline-dark card-link '.$text_class.'">See Details</a>
             </div>
         </div>'; 
 
