@@ -1,10 +1,13 @@
-web:
-  container_name: docker_climatact
-  build: .
-  ports:
-    - "80:80"
-  volumes:
-    - ./src:/var/www/html/
-    - ./conf/apache:/etc/apache2/sites-enabled/
-    # - ./conf/php:/usr/local/etc/php/
+version: "3"
+
+services:
+  web:
+    container_name: docker_climatact
+    build: .
+    ports:
+      - "80:80"
+    volumes:
+      - ./src:/var/www/html/
+      - ./conf/apache:/etc/apache2/sites-enabled/
+      # - ./conf/php:/usr/local/etc/php/
 
