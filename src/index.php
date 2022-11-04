@@ -2,7 +2,6 @@
 include_once('header.php');
 
 
-
 // Show options for Weather, Disaster, and Sea Level navigation.
 show_options();
 
@@ -22,13 +21,15 @@ print_close_page();
 // test query shows information if connection successful.
 function test_connection(){
     global $connection;
+    global $LOV;
 
     // If test query is not empty, connection succeeded.
     if($connection){
         echo '<h4 class="text-success"><i>Connection to Cise Database Successful</i></h4>';
        
+        $table = $LOV->tables['gmsl'];
         // Count regional temperature.
-        $count = count_table($table = 'GUNGO06.RegionalTemperature');
+        $count = count_table($table);
         echo '<p>Total Count in <b>'.$table.' : '.$count.'</p> </b>';
         echo '<br>';
     }
