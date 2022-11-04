@@ -8,7 +8,7 @@ It contains PHP 7, Apache 2, Oracle's OCI8 extension.
 <img src="https://i.imgur.com/L0001P9.png" width="500">
 
 ## Setup
-- Clone repo: ```git clone https://github.com/Gungo/Climatact-Docker.git```
+- **Fork** this repo and clone the forked repo into a local directory for development.
 
 - Enter workspace: ```cd climatact-docker```
 
