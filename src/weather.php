@@ -8,7 +8,8 @@ print_header();
 
 
 
-echo 'weather shit';
+echo '<h2>weather trend query number 1</h2>';
+
 
 
 
